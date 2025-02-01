@@ -35,17 +35,39 @@ body {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #ff5500; /* Green color */
-}
-
-.highlight {
-    color: #4CAF50; /* Highlight color */
+    color: #ff5500;
 }
 
 p {
     font-size: 18px;
     margin-bottom: 20px;
     color: #444;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #00b7ff;
+}
+
+/* Role Selection */
+.role-selection {
+    margin-bottom: 20px;
+}
+
+.role-selection label {
+    font-size: 16px;
+    margin-right: 20px;
 }
 
 /* Buttons */
@@ -61,7 +83,7 @@ p {
     font-size: 18px;
     text-decoration: none;
     border-radius: 30px;
-    margin: 10px 0; /* Adjusting vertical margin */
+    margin: 10px 0;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -87,7 +109,6 @@ p {
     text-decoration: underline;
 }
 
-
 /* Responsive Design */
 @media (max-width: 400px) {
     .container {
@@ -103,10 +124,6 @@ p {
         font-size: 16px;
         padding: 12px 30px;
     }
-
-    .social-icon {
-        font-size: 20px;
-    }
 }
 
 /* Fade-in effect for the container */
@@ -120,3 +137,24 @@ p {
         transform: translateY(0);
     }
 }
+/* Success Message Box */
+.message-box {
+    text-align: center;
+    background-color: #d4edda; /* Light green background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.message-box h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #28a745; /* Green color */
+}
+
+.message-box p {
+    font-size: 18px;
+    color: #333;
+}
+

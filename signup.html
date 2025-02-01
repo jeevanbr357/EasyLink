@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, Welcome!</h1>
+        <p>Please fill in the details below to create your account.</p>
+        
+        <!-- Form starts here -->
+        <form id="signup-form">
+            <!-- First Name -->
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" class="input-field" required />
+
+            <!-- Middle Name (Optional) -->
+            <input type="text" id="middle-name" name="middle-name" placeholder="Middle Name (Optional)" class="input-field" />
+
+            <!-- Last Name -->
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required class="input-field" />
+
+            <!-- Email -->
+            <input type="email" id="email" name="email" placeholder="Email Address" required class="input-field" />
+
+            <!-- Phone Number -->
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required class="input-field" />
+
+            <!-- Role Selection -->
+            <div class="role-selection">
+                <label>
+                    <input type="radio" name="role" value="producer" required> Producer
+                </label>
+                <label>
+                    <input type="radio" name="role" value="captain" required> Captain
+                </label>
+                <label>
+                    <input type="radio" name="role" value="customer" required> Customer
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="buttons">
+                <button type="submit" class="btn">Sign Up</button>
+            </div>
+        </form>
+
+        <div class="signup-link">
+            <p>Already have an account? <a href="index.html">Login Here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        // Get the form element and add an event listener to handle form submission
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission behavior
+
+            // Get the values from the form
+            const firstName = document.getElementById("first-name").value;
+            const lastName = document.getElementById("last-name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const role = document.querySelector('input[name="role"]:checked');
+
+            // Perform validation checks (can be expanded if necessary)
+            if (!firstName || !lastName || !email || !phone || !role) {
+                alert("Please fill in all required fields.");
+                return;  // Stop form submission if validation fails
+            }
+
+            // If validation passes, redirect to registration.html
+            window.location.href = "registration.html"; // Redirect to the registration page
+        });
+    </script>
+</body>
+</html>

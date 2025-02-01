@@ -1,13 +1,7 @@
-/* Reset some basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Body styling with image background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url('https://wallpaperaccess.com/full/1598228.jpg');
     background-size: 300% 300%;
     animation: gradient-animation 8s infinite;
@@ -17,6 +11,12 @@ body {
     height: 100vh;
     margin: 0;
 }
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 /* Welcome container styling */
 .welcome-container {
@@ -111,12 +111,3 @@ header p {
     z-index: 1;
 }
 
-/* Futuristic animation for background */
-@keyframes backgroundMove {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
