@@ -1,0 +1,122 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://wallpaperaccess.com/full/1598228.jpg');
+    background-size: 300% 300%;
+    animation: gradient-animation 8s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Gradient Animation for Background */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+    animation: fadeInContainer 2s ease-in-out forwards 1s; /* Delay container fade-in */
+}
+
+/* Heading and Paragraph */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff5500; /* Green color */
+}
+
+.highlight {
+    color: #4CAF50; /* Highlight color */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Buttons */
+.buttons {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 10px 0; /* Adjusting vertical margin */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b7ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+/* Sign Up Link Styling */
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #00b3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
+/* Fade-in effect for the container */
+@keyframes fadeInContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
